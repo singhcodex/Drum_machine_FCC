@@ -4,13 +4,11 @@ $btn-color: #444444;
 $dark-base: #0A0708;
 
 .main {
-  background-color: $main-base;
-  width: 100vw;
-  height: 100vh;
-
+  //background-color: $main-base;
 }
 
 .card {
+  background-color: $main-base;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -30,6 +28,66 @@ $dark-base: #0A0708;
       padding: 1.25rem 1.25rem 1.25rem 1.75rem;
     }
   }
+  .display-section{
+    .drum-title{
+      margin: 2rem;
+    }
+    .input-div{
+      margin-top: 3rem;
+    }
+  }
+  .btn-div{
+    margin: 2rem;
+  }
 
+  .switch{
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.2rem;
+
+    input[type=checkbox]{
+      opacity: 0;
+      width: 0;
+      height: 0;
+      &:checked + .slider{
+        background-color: $dark-base;
+        &:before{
+          transform: translateX(2.6rem);
+        }
+      }
+      &:focus + .slider{
+        box-shadow: 0 0 1px #2196F3;
+      }
+    }
+
+    .slider{
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $card-base;
+      transition: .4s;
+      &:before{
+        position: absolute;
+        content: "";
+        height: 2.6rem;
+        width: 2.6rem;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+      }
+    }
+    .slider.round{
+      border-radius: 34px;
+      &:before{
+        border-radius: 50%;
+      }
+    }
+
+  }
 
 }

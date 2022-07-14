@@ -1,10 +1,5 @@
-.main {
-  background-color: #B1B1B1;
-  width: 100vw;
-  height: 100vh;
-}
-
 .card {
+  background-color: #B1B1B1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,5 +30,76 @@
 
 .card .btn-section .drum-pad {
   padding: 1.25rem 1.25rem 1.25rem 1.75rem;
+}
+
+.card .display-section .drum-title {
+  margin: 2rem;
+}
+
+.card .display-section .input-div {
+  margin-top: 3rem;
+}
+
+.card .btn-div {
+  margin: 2rem;
+}
+
+.card .switch {
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3.2rem;
+}
+
+.card .switch input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.card .switch input[type=checkbox]:checked + .slider {
+  background-color: #0A0708;
+}
+
+.card .switch input[type=checkbox]:checked + .slider:before {
+  -webkit-transform: translateX(2.6rem);
+          transform: translateX(2.6rem);
+}
+
+.card .switch input[type=checkbox]:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.card .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #747474;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.card .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 2.6rem;
+  width: 2.6rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.card .switch .slider.round {
+  border-radius: 34px;
+}
+
+.card .switch .slider.round:before {
+  border-radius: 50%;
 }
 /*# sourceMappingURL=styles.css.map */
