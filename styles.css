@@ -1,0 +1,39 @@
+.main {
+  background-color: #B1B1B1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 1px solid #0A0708;
+  max-width: 50rem;
+}
+
+.card .btn-section {
+  width: 100%;
+  border: 1px solid #0A0708;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 1.75rem 1.25rem;
+}
+
+.card .btn-section .drum-pad {
+  padding: 1.25rem 1.25rem 1.25rem 1.75rem;
+}
+/*# sourceMappingURL=styles.css.map */
